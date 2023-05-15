@@ -24,21 +24,29 @@ function timer() {
     }, 1000)
 }
 
+function correctAnswer() {
+
+}
+
+function wrongAnswer() {
+
+}
+
 // function to add html elements to display Q&As
 function displayElement(element, question) {
     element.textContent = question;
 }
 
 // quiz questions
-var questions = ['Which is an example of a data type?'];
-var correctAnswers = ['Boolean'];
+var questions = ['Which is an example of a data type?', 'What programming language are websites usually codded in?'];
+var correctAnswers = ['Boolean', 'HTML'];
 var i = 0;
 function startQuiz() {
     displayElement(questionEl, questions[i]);
-    displayElement(answerEl1, correctAnswers[i]);
+    displayElement(answerEl1, 'Chicken Tenders');
     displayElement(answerEl2, correctAnswers[i]);
-    displayElement(answerEl3, correctAnswers[i]);
-    displayElement(answerEl4, correctAnswers[i]);
+    displayElement(answerEl3, 'Mitochondria');
+    displayElement(answerEl4, 'Taco Bell');
     i++;
 }
 
@@ -49,4 +57,10 @@ function initialize() {
     timer();
 }
 
-startButton.addEventListener('click', initialize)
+// static answering system but could change later (lines 46-49 atm)
+answerEl1.addEventListener('click', wrongAnswer);
+answerEl2.addEventListener('click', correctAnswer);
+answerEl3.addEventListener('click', wrongAnswer);
+answerEl4.addEventListener('click', wrongAnswer);
+
+startButton.addEventListener('click', initialize);
