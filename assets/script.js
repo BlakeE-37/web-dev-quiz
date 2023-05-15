@@ -2,7 +2,7 @@
 var startButton = document.getElementById('startButton')
 var startScreen = document.getElementById('startScreen')
 var timerDisplay = document.getElementById('timer')
-
+var quizContainer = document.getElementById('quiz')
 
 // timer initialization
 quizTimeAmount = 51
@@ -18,16 +18,22 @@ function timer() {
     }, 1000)
 }
 
-// quiz questions
-
 // function to add html elements to display Q&As
-function displayQuiz() {
+function displayQuestion(question) {
+    let questionEl;
+}
 
+// quiz questions
+var questions = ['Which is an example of a data type?']
+var i = 0;
+function startQuiz() {
+    displayQuestion(questions[i]);
+    i++;
 }
 
 function initialize() {
     startScreen.setAttribute('style', 'display: none;');
-    displayQuiz();
+    startQuiz();
     timer();
 }
 
