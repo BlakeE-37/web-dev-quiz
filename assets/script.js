@@ -3,6 +3,7 @@ var startButton = document.getElementById('startButton')
 var startScreen = document.getElementById('startScreen')
 var quizScreen = document.getElementById('quiz')
 var timerDisplay = document.getElementById('timer')
+var questionEl = document.getElementById('question')
 
 // timer initialization
 quizTimeAmount = 51
@@ -20,7 +21,7 @@ function timer() {
 
 // function to add html elements to display Q&As
 function displayQuestion(question) {
-    let questionEl;
+    questionEl.textContent = question;
 }
 
 // quiz questions

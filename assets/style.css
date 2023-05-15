@@ -76,3 +76,26 @@
     font-family: kanit, sans-serif;
     color: white;
 }
+
+.answersContainer {
+    min-height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.answerButton {
+    font-family: kanit, sans-serif;
+    font-weight: 200;
+    background-color: #8bff77;
+    border: none;
+    width: 40vw;
+    height: 7vh;
+    font-size: 3vh;
+    border-radius: 25px;
+    align-self: center;
+}
+
+.answerButton:hover {
+    cursor: pointer;
+}
