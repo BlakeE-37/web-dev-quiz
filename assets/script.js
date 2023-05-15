@@ -1,8 +1,8 @@
 // Retrieve all needed elements from the html
 var startButton = document.getElementById('startButton')
 var startScreen = document.getElementById('startScreen')
+var quizScreen = document.getElementById('quiz')
 var timerDisplay = document.getElementById('timer')
-var quizContainer = document.getElementById('quiz')
 
 // timer initialization
 quizTimeAmount = 51
@@ -33,6 +33,7 @@ function startQuiz() {
 
 function initialize() {
     startScreen.setAttribute('style', 'display: none;');
+    quizScreen.setAttribute('style', 'display: block;');
     startQuiz();
     timer();
 }
