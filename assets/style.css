@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap');
+
+.starterScreen {
+    max-width: 100%;
+    height: 400px;
+    margin: 20px;
+    background-color: #374e37;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.titleText {
+    font-family: kanit, sans-serif;
+    color: white;
+    font-size: 10vh;
+}
+
+.startButton {
+    font-family: kanit, sans-serif;
+    font-weight: 200;
+    background-color: #8bff77;
+    border: none;
+    margin: auto;
+    width: 15vw;
+    height: 7vh;
+    font-size: 3vh;
+    border-radius: 25px;
+}
+
+.startButton:hover {
+    cursor: pointer;
+}
