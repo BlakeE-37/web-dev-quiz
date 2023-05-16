@@ -100,3 +100,9 @@
 .answerButton:hover {
     cursor: pointer;
 }
+
+.rightOrWrong {
+    font-family: kanit, sans-serif;
+    margin-top: 100px;
+
+}
