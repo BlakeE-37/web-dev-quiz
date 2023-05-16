@@ -22,6 +22,7 @@ function timer() {
         // timer stop logic
         if (quizTimeAmount <= 0) {
             clearInterval(quizTimer);
+            gameOver();
         }
     }, 1000)
 }
@@ -40,22 +41,22 @@ function wrongAnswer() {
 }
 
 // function to add html elements to display Q&As
-function displayElement(element, question) {
-    element.textContent = question;
+function displayElement(element, text) {
+    element.textContent = text;
 }
 
 //game over function to end the game
 function gameOver() {
-    return
+    CorrectIncorrect.textContent = 'Game Over!'
 }
 
 // quiz questions
-var questions = ['Which is an example of a data type?', 'What programming language are websites usually codded in?'];
+var questions = ['Which is an example of a data type?', 'What programming language are websites usually coded in?'];
 var correctAnswers = ['Boolean', 'HTML'];
 var i = 0;
 // if there are more questions keep going, if there are no more questions run game over function
 function startQuiz() {
-    if (i > questions.length - 1) {
+    if (i <= questions.length - 1) {
         displayElement(questionEl, questions[i]);
         displayElement(answerEl1, 'Chicken Tenders');
         displayElement(answerEl2, correctAnswers[i]);
