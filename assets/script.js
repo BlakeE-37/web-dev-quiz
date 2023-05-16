@@ -20,6 +20,12 @@ var scoreText = document.getElementById('scoreText')
 var saveScoreButton = document.getElementById('saveScore')
 var userNameInput = document.getElementById('initialsInput')
 
+//display High Score Screen
+function displayHighScore() {
+
+}
+
+
 // timer initialization
 quizTimeAmount = 51
 function timer() {
