@@ -18,6 +18,7 @@ var startButton = document.getElementById('startButton')
 // Game Over screen elements
 var scoreText = document.getElementById('scoreText')
 var saveScoreButton = document.getElementById('saveScore')
+var userNameInput = document.getElementById('initialsInput')
 
 // timer initialization
 quizTimeAmount = 51
@@ -34,11 +35,6 @@ function timer() {
     }, 1000)
 }
 
-// save score to local storage function
-function saveScore() {
-    return
-}
-
 // if the answer was right display it and go to next question
 score = 0;
 function correctAnswer() {
@@ -52,6 +48,13 @@ function wrongAnswer() {
     CorrectIncorrect.textContent = 'Wrong!'
     quizTimeAmount = quizTimeAmount - 10;
     startQuiz();
+}
+
+// save score to local storage function
+function saveScore() {
+    localStorage.setItem('Initials', userNameInput.value);
+    localStorage.setItem('Score', score);
+    displayHighScore();
 }
 
 // function to add html elements to display Q&As
