@@ -24,17 +24,6 @@ var userNameInput = document.getElementById('initialsInput')
 var highScoreText = document.getElementById('highScoreText')
 
 //display High Score Screen
-function displayHighScore() {
-    // sets all other screens to display: none
-    startScreen.setAttribute('style', 'display: none;');
-    quizScreen.setAttribute('style', 'display: none;');
-    gameOverScreen.setAttribute('style', 'display: none;');
-    highScoreScreen.setAttribute('style', 'display: block;');
-
-    var initials = localStorage.getItem('initials')
-    var highScore = localStorage.getItem('score')
-    highScoreText.textContent = `${initials}: ${highScore}`
-}
 
 // timer initialization
 quizTimeAmount = 51
@@ -49,6 +38,19 @@ function timer() {
             gameOver();
         }
     }, 1000)
+}
+
+function displayHighScore() {
+    quizTimeAmount = 1;
+    // sets all other screens to display: none
+    startScreen.setAttribute('style', 'display: none;');
+    quizScreen.setAttribute('style', 'display: none;');
+    gameOverScreen.setAttribute('style', 'display: none;');
+    highScoreScreen.setAttribute('style', 'display: block;');
+
+    var initials = localStorage.getItem('initials')
+    var highScore = localStorage.getItem('score')
+    highScoreText.textContent = `${initials}: ${highScore}`
 }
 
 // if the answer was right display it and go to next question
