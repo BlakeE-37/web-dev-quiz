@@ -86,8 +86,8 @@ function gameOver() {
 }
 
 // quiz questions
-var questions = ['Which is an example of a data type?', 'What programming language are websites usually coded in?'];
-var correctAnswers = ['Boolean', 'HTML'];
+var questions = ['Which is an example of a data type?', 'What programming language are websites usually coded in?', 'What is an array in JavaScript similar to?', 'what is a common array method?', 'what is one way to declare a variable in JavaScript?'];
+var correctAnswers = ['Boolean', 'HTML', 'list', 'push()', 'var'];
 var i = 0;
 // if there are more questions keep going, if there are no more questions run game over function
 function startQuiz() {
