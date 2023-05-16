@@ -20,6 +20,8 @@ var startButton = document.getElementById('startButton')
 var scoreText = document.getElementById('scoreText')
 var saveScoreButton = document.getElementById('saveScore')
 var userNameInput = document.getElementById('initialsInput')
+// high score text element
+var highScoreText = document.getElementById('highScoreText')
 
 //display High Score Screen
 function displayHighScore() {
@@ -28,6 +30,10 @@ function displayHighScore() {
     quizScreen.setAttribute('style', 'display: none;');
     gameOverScreen.setAttribute('style', 'display: none;');
     highScoreScreen.setAttribute('style', 'display: block;');
+
+    var initials = localStorage.getItem('initials')
+    var highScore = localStorage.getItem('score')
+    highScoreText.textContent = `${initials}: ${highScore}`
 }
 
 // timer initialization
@@ -62,8 +68,8 @@ function wrongAnswer() {
 
 // save score to local storage function
 function saveScore() {
-    localStorage.setItem('Initials', userNameInput.value);
-    localStorage.setItem('Score', score);
+    localStorage.setItem('initials', userNameInput.value);
+    localStorage.setItem('score', score);
     displayHighScore();
 }
 
