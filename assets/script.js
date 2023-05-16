@@ -120,4 +120,8 @@ answerEl4.addEventListener('click', wrongAnswer);
 // Save score button
 saveScoreButton.addEventListener('click', saveScore)
 
+// high score button
+highScoreButton.addEventListener('click', displayHighScore)
+
+// start the quiz button
 startButton.addEventListener('click', initialize);
