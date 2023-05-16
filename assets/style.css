@@ -117,6 +117,8 @@
     background-color: #374e37;
     border-radius: 30px;
     text-align: center;
+
+    display: none;
 }
 
 .smallText {
