@@ -1,16 +1,23 @@
-// Retrieve all needed elements from the html
-var startButton = document.getElementById('startButton')
+// Retrieve all needed elements from the html doc
+// div elements for each screen
 var startScreen = document.getElementById('startScreen')
 var quizScreen = document.getElementById('quiz')
+var gameOverScreen = document.getElementById('gameOver')
+// header elements
+var highScoreButton = document.getElementById('highScoreButton')
 var timerDisplay = document.getElementById('timer')
-
+// quiz elements
 var questionEl = document.getElementById('question')
 var answerEl1 = document.getElementById('answer1')
 var answerEl2 = document.getElementById('answer2')
 var answerEl3 = document.getElementById('answer3')
 var answerEl4 = document.getElementById('answer4')
-
 var CorrectIncorrect = document.getElementById('rightOrWrong')
+// Main Screen Button
+var startButton = document.getElementById('startButton')
+// Game Over screen elements
+var scoreText = document.getElementById('scoreText')
+var saveScoreButton = document.getElementById('saveScore')
 
 // timer initialization
 quizTimeAmount = 51
@@ -28,8 +35,10 @@ function timer() {
 }
 
 // if the answer was right display it and go to next question
+score = 0;
 function correctAnswer() {
     CorrectIncorrect.textContent = 'Correct!'
+    score = score + quizTimeAmount;
     startQuiz();
 }
 
@@ -47,7 +56,9 @@ function displayElement(element, text) {
 
 //game over function to end the game
 function gameOver() {
-    quizScreen.setAttribute('style', 'display: none;')
+    quizScreen.setAttribute('style', 'display: none;');
+    gameOverScreen.setAttribute('style', 'display: block;');
+    scoreText.textContent = `Your Score is: ${score}`
 }
 
 // quiz questions
@@ -64,6 +75,7 @@ function startQuiz() {
         displayElement(answerEl4, 'Taco Bell');
         i++;
     } else {
+        quizTimeAmount = 1;
         gameOver();
     }
 }
