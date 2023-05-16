@@ -47,7 +47,7 @@ function displayElement(element, text) {
 
 //game over function to end the game
 function gameOver() {
-    CorrectIncorrect.textContent = 'Game Over!'
+    quizScreen.setAttribute('style', 'display: none;')
 }
 
 // quiz questions

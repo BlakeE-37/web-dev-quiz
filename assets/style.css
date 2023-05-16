@@ -103,6 +103,6 @@
 
 .rightOrWrong {
     font-family: kanit, sans-serif;
-    margin-top: 100px;
-
+    margin-top: 50px;
+    font-size: 5vh;
 }
