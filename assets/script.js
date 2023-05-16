@@ -3,6 +3,7 @@
 var startScreen = document.getElementById('startScreen')
 var quizScreen = document.getElementById('quiz')
 var gameOverScreen = document.getElementById('gameOver')
+var highScoreScreen = document.getElementById('highScore')
 // header elements
 var highScoreButton = document.getElementById('highScoreButton')
 var timerDisplay = document.getElementById('timer')
@@ -22,9 +23,12 @@ var userNameInput = document.getElementById('initialsInput')
 
 //display High Score Screen
 function displayHighScore() {
-
+    // sets all other screens to display: none
+    startScreen.setAttribute('style', 'display: none;');
+    quizScreen.setAttribute('style', 'display: none;');
+    gameOverScreen.setAttribute('style', 'display: none;');
+    highScoreScreen.setAttribute('style', 'display: block;');
 }
-
 
 // timer initialization
 quizTimeAmount = 51
