@@ -10,6 +10,8 @@ var answerEl2 = document.getElementById('answer2')
 var answerEl3 = document.getElementById('answer3')
 var answerEl4 = document.getElementById('answer4')
 
+var CorrectIncorrect = document.getElementById('rightOrWrong')
+
 // timer initialization
 quizTimeAmount = 51
 function timer() {
@@ -24,12 +26,17 @@ function timer() {
     }, 1000)
 }
 
+// if the answer was right display it and go to next question
 function correctAnswer() {
-
+    CorrectIncorrect.textContent = 'Correct!'
+    startQuiz();
 }
 
+// if the answer was wrong display it, subtract time, and go to next question
 function wrongAnswer() {
-
+    CorrectIncorrect.textContent = 'Wrong!'
+    quizTimeAmount = quizTimeAmount - 10;
+    startQuiz();
 }
 
 // function to add html elements to display Q&As
