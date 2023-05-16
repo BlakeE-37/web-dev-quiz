@@ -44,17 +44,27 @@ function displayElement(element, question) {
     element.textContent = question;
 }
 
+//game over function to end the game
+function gameOver() {
+    return
+}
+
 // quiz questions
 var questions = ['Which is an example of a data type?', 'What programming language are websites usually codded in?'];
 var correctAnswers = ['Boolean', 'HTML'];
 var i = 0;
+// if there are more questions keep going, if there are no more questions run game over function
 function startQuiz() {
-    displayElement(questionEl, questions[i]);
-    displayElement(answerEl1, 'Chicken Tenders');
-    displayElement(answerEl2, correctAnswers[i]);
-    displayElement(answerEl3, 'Mitochondria');
-    displayElement(answerEl4, 'Taco Bell');
-    i++;
+    if (i > questions.length - 1) {
+        displayElement(questionEl, questions[i]);
+        displayElement(answerEl1, 'Chicken Tenders');
+        displayElement(answerEl2, correctAnswers[i]);
+        displayElement(answerEl3, 'Mitochondria');
+        displayElement(answerEl4, 'Taco Bell');
+        i++;
+    } else {
+        gameOver();
+    }
 }
 
 function initialize() {
