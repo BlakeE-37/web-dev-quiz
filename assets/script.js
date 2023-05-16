@@ -34,6 +34,11 @@ function timer() {
     }, 1000)
 }
 
+// save score to local storage function
+function saveScore() {
+    return
+}
+
 // if the answer was right display it and go to next question
 score = 0;
 function correctAnswer() {
@@ -87,10 +92,13 @@ function initialize() {
     timer();
 }
 
-// static answering system but could change later (lines 46-49 atm)
+// static answering system but could change later
 answerEl1.addEventListener('click', wrongAnswer);
 answerEl2.addEventListener('click', correctAnswer);
 answerEl3.addEventListener('click', wrongAnswer);
 answerEl4.addEventListener('click', wrongAnswer);
+
+// Save score button
+saveScoreButton.addEventListener('click', saveScore)
 
 startButton.addEventListener('click', initialize);
